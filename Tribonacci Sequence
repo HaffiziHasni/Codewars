@@ -1,0 +1,21 @@
+def tribonacci(signature, n):
+    i=0
+    if n == 1:
+        b=signature[0]
+        return [b];
+    elif n==2:
+        d=signature[0]
+        e=signature[1]
+        return [d,e];
+
+    elif n==0:
+        a=[]
+        return a;
+    else:
+        y=n-3  
+        while i < y:         
+         x=signature[i]+signature[i+1]+signature[i+2]
+         signature.append(x)
+         i=i+1 
+
+        return signature;
